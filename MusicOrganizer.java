@@ -190,31 +190,4 @@ public class MusicOrganizer
         }
     }
     
-    /**
-     * Play random playlist in the collection
-     */
-    public void playRandomlist()
-    {
-        ArrayList<Track> randomTracks = new ArrayList<>();
-        int randomNumber;
-        
-        for (int i = 0; i < tracks.size() ; i++)
-        {
-            randomTracks.add(tracks.get(randomNumbers.nextInt(tracks.size() - 1)));
-        }       
-
-        for(Track track : randomTracks) {
-            player.startPlaying(track.getFilename());
-        }
-        
-        //Iterator<Track> it = randomTracks.iterator();
-        //while (it.hasNext())
-        //{
-        //    Track t = it.next();
-        //    player.startPlaying(t.getFilename());
-        //    it.remove();  
-        //}                        
-        
-        
-    }
 }
